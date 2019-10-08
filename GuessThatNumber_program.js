@@ -39,6 +39,39 @@
             document.getElementById("textOutput").innerHTML = 'You Are Correct';
         }
     }
+    function buttonSpinner() {
+        
+        guessButton.onclick = () =>{
+        console.log('guessTextField: ${guessTextField.value}');
+        let guessValue = Number.parseInt(guessTextField.nodeValue, 10);
+    
+        var message = '';
+    
+        if(isNaN(guessValue)){
+            message = 'Error';
+        }
+        else {
+            message = guessValue;
+        }
+    
+        // start spinning
+        spinnerstyle.display = "inline";
+        setTimeout(() => {
+    
+            spinner.style.display = "none"
+            output.innerHTML = message;
+    
+        }, 3000);
+        
+        output.innerHTML = message;
+        }
+    }
+        
+ 
+    
+
+  
+
 
 
         
