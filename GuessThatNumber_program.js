@@ -6,7 +6,8 @@
 
 
     (function ($.newGame) {
-        $(window).location.reload();
+        $('#window').click(function() {
+            location.reload();
     }
 
     function init() {
