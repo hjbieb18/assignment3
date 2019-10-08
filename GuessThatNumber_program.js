@@ -1,12 +1,12 @@
 
-    var compGuess;
-    var userGuessLog = [];
-    var score = 0;
+    $.compGuess;
+    $.userGuessLog = [];
+    $.score = 0;
 
 
 
-    function newGame() {
-        window.location.reload();
+    (function ($.newGame) {
+        $(window).location.reload();
     }
 
     function init() {
