@@ -1,14 +1,14 @@
-
+    console.log("GuessThatNumber_program.js");
     var compGuess;
     var userGuessLog = [];
     var score = 0;
     $('#spinner').hide();
 
-    $(document).ready(function(){
+   
         
     
-    function newGame(){
-      window.location.reload();
+    $(window).load(function newGame(){
+        //window.location.reload();  
     }
    
 
@@ -31,7 +31,7 @@
             // console.log(userGuessLog);
         var userGuessLog = $('#guessLog').innerHTML;
         score++;
-        var score = $('#score').innerHTML;
+        var score = $('#textOutput').innerHTML('#score');
    
      
         if(userGuess > compGuess) {
@@ -48,7 +48,7 @@
     }
             
         
-    $('#submit').click(function init() {
+    $('#submit').click(function buttonSpinner() {
         //buttonSpinner() {
         
         $('#spinner').show();
