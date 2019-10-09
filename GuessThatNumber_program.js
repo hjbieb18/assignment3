@@ -1,19 +1,18 @@
 
-    $.compGuess;
-    $.userGuessLog = [];
-    $.score = 0;
+    var compGuess;
+    var userGuessLog = [];
+    var score = 0;
+    $('#spinner').hide();
 
-
-
-    $(function(newGame){
-      window.location.reload();
-    })
+    $(document).ready(function(){
         
-
-   
     
+    function newGame(){
+      window.location.reload();
+    }
+   
 
-    $(function(init) {
+    function init() {
 
         compGuess = Math.floor(Math.random() * 100 + 1);
         // console.log(compGuess);
@@ -23,65 +22,40 @@
            
 // document.getElementById(“myElement”) to $(‘#myElement’)
 
-
-    $(function(compareGuess) {
-
-        var userGuess =" " + $('#inputBox'){
+    var userGuessLog = {};
+    function compareGuess() {
+   
+        var userGuess = $('#inputBox').val();
             // console.log(userGuess);
-            userGuessLog.push(userGuess);
+        var userGuess = parseFloat($ ('#guessLog').val());
             // console.log(userGuessLog);
-            document.getElementById("guessLog").innerHTML = userGuessLog;
-            score++;
-            document.getElementById("score").innerHTML = score;
-        }
+        var userGuessLog = $('#guessLog').innerHTML;
+        score++;
+        var score = $('#score').innerHTML;
+   
+     
         if(userGuess > compGuess) {
-                document.getElementById("textOutput").innerHTML = 'Too High';
-                document.getElementById('inputBox').value = "";
+            $('#textOutput').innerHTML("Too High");
+            $('#inputBox').val("");
         }
         else if (userGuess < compGuess) {
-                document.getElementById("textOutput").innerHTML = 'Too Low';
-                document.getElementById("inputBox").value = "";
+            $('#textOutput').innerHTML("Too Low");
+            $('#inputBox').val("");
         }
         else {
-            document.getElementById("textOutput").innerHTML = 'You Are Correct';
-        }
-    })
-            
-        
-    function buttonSpinner() {
-        
-        guessButton.onclick = () =>{
-        console.log('guessTextField: ${guessTextField.value}');
-        let guessValue = Number.parseInt(guessTextField.nodeValue, 10);
-    
-        var message = '';
-    
-        if(isNaN(guessValue)){
-            message = 'Error';
-        }
-        else {
-            message = guessValue;
-        }
-    
-        // start spinning
-        spinnerstyle.display = "inline";
-        setTimeout(() => {
-    
-            spinner.style.display = "none"
-            output.innerHTML = message;
-    
-        }, 3000);
-        
-        output.innerHTML = message;
+            $('#textOutput').innerHTML("You Are Correct");
         }
     }
+            
         
+    $('#submit').click(function init() {
+        //buttonSpinner() {
+        
+        $('#spinner').show();
+        setTimeout(() => {
+          
+            $('#spinner').style.hide();
+        },3000);
+        $('#textOutput').innerHTML('#textOutput');
+    }
  
-    
-
-  
-
-
-
-        
-
