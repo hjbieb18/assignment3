@@ -1,4 +1,4 @@
-    console.log("GuessThatNumber_program.js");
+    
     var compGuess;
     var userGuessLog = [];
     var score = 0;
@@ -57,5 +57,6 @@
             $('#spinner').style.hide();
         },3000);
         $('#textOutput').innerHTML('#textOutput');
-    }
+    })
+     
  
